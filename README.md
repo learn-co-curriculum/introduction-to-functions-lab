@@ -26,6 +26,27 @@ def number_of_destinations():
 number_of_destinations() # 6
 ```
 
+
+```python
+# __SOLUTION__ 
+travel_destinations = ['argentina', 'mexico', 'italy', 'finland', 'canada', 'croatia']
+def number_of_destinations():
+    return len(travel_destinations)
+```
+
+
+```python
+# __SOLUTION__ 
+number_of_destinations() # 6
+```
+
+
+
+
+    6
+
+
+
 Now write another function called `next_up` that returns our first destination (the destination with the lowest index), in the `travel_destinations` list.
 
 
@@ -46,6 +67,41 @@ travel_destinations = ['finland', 'canada', 'croatia']
 next_up() # 'finland'
 ```
 
+
+```python
+# __SOLUTION__ 
+def next_up():
+    return travel_destinations[0]
+```
+
+
+```python
+# __SOLUTION__ 
+travel_destinations = ['argentina', 'mexico', 'italy']
+next_up() # 'argentina'
+```
+
+
+
+
+    'argentina'
+
+
+
+
+```python
+# __SOLUTION__ 
+travel_destinations = ['finland', 'canada', 'croatia']
+next_up() # 'finland'
+```
+
+
+
+
+    'finland'
+
+
+
 Ok, now write a function called `favorite_destination` that returns the string `'madagascar'`.
 
 
@@ -60,6 +116,28 @@ def favorite_destination():
 favorite_destination() # 'madagascar'
 ```
 
+
+```python
+# __SOLUTION__ 
+travel_destinations = ['argentina', 'mexico', 'italy', 'finland', 'canada', 'croatia']
+def favorite_destination():
+    travel_destinations.append('madagascar')
+    return travel_destinations[-1]
+```
+
+
+```python
+# __SOLUTION__ 
+favorite_destination() # 'madagascar'
+```
+
+
+
+
+    'madagascar'
+
+
+
 Again, let's declare an array called `travel_destinations`. Change the function `favorite_destination` so that it continues to return the string `'madagascar'`, but also adds the string `'madagascar'` to the end of the list of destinations.
 
 
@@ -68,6 +146,21 @@ travel_destinations = ['argentina', 'mexico', 'italy', 'finland', 'canada', 'cro
 favorite_destination()
 travel_destinations[-1] # 'madagascar'
 ```
+
+
+```python
+# __SOLUTION__ 
+travel_destinations = ['argentina', 'mexico', 'italy', 'finland', 'canada', 'croatia']
+favorite_destination()
+travel_destinations[-1] # 'madagascar'
+```
+
+
+
+
+    'madagascar'
+
+
 
 Now let's write another function which iterates through the list of `destinations` and capitalizes the first letter of each word. It should return a list of capitalized destinations.
 
@@ -83,6 +176,30 @@ def capitalize_countries():
 capitalize_countries() # ['Argentina', 'Mexico', 'Italy', 'Finland', 'Canada', 'Croatia']
 ```
 
+
+```python
+# __SOLUTION__ 
+travel_destinations = ['argentina', 'mexico', 'italy', 'finland', 'canada', 'croatia']
+def capitalize_countries():
+    capitalized_countries = []
+    for destination in travel_destinations:
+        capitalized_countries.append(destination.title())
+    return capitalized_countries
+```
+
+
+```python
+# __SOLUTION__ 
+capitalize_countries() # ['Argentina', 'Mexico', 'Italy', 'Finland', 'Canada', 'Croatia']
+```
+
+
+
+
+    ['Argentina', 'Mexico', 'Italy', 'Finland', 'Canada', 'Croatia']
+
+
+
 Great! Now if someone adds a country that is lowercased to our list of destinations, we can simply call our function again to capitalize each of the destinations in the list.
 
 
@@ -92,6 +209,22 @@ capitalize_countries() # ['Argentina', 'Mexico', 'Italy', 'Finland', 'Canada', '
 travel_destinations.append('japan')
 capitalize_countries() # ['Argentina', 'Mexico', 'Italy', 'Finland', 'Canada', 'Croatia', 'Japan']
 ```
+
+
+```python
+# __SOLUTION__ 
+travel_destinations = ['argentina', 'mexico', 'italy', 'finland', 'canada', 'croatia']
+capitalize_countries() # ['Argentina', 'Mexico', 'Italy', 'Finland', 'Canada', 'Croatia']
+travel_destinations.append('japan')
+capitalize_countries() # ['Argentina', 'Mexico', 'Italy', 'Finland', 'Canada', 'Croatia', 'Japan']
+```
+
+
+
+
+    ['Argentina', 'Mexico', 'Italy', 'Finland', 'Canada', 'Croatia', 'Japan']
+
+
 
 ## Summary
 
